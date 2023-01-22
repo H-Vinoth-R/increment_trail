@@ -1,13 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.title {
+  font: 16px baton-turbo, sans-serif;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.previous {
+  left: 0;
+  /* transform: translate(-100%, -50%); */
+  color: #000;
+  position: absolute;
+  top: 50%;
+}
+.IssueTitle {
+  display: inline-flex;
+  text-align: left;
+  box-shadow: inset 0 0 0 1.5px #4c70b1;
+  padding: 1px;
+  max-width: 100%;
+  overflow: hidden;
+  border-color: #4c70b1;
+}
+.IssueTitle .meta {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  box-shadow: inset -1.5px 0 0 #4c70b1;
+  padding-right: 1px;
+}
+.IssueTitle .meta > span {
+  padding: 0.25em 0.65em;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.IssueTitle .title {
+  align-self: center;
+}
+.IssueTitle.large .meta {
+  font-size: 12px;
+}
+.IssueTitle.large .title {
+  color: #000;
+  font-size: 28px;
+  padding: 0.25em 0.4em 0.27em;
+}
+.ArticleBlockLarge {
+  @apply flex flex-col items-center md:flex-row w-screen h-2/3 m-12 p-4;
+}
+.ABLargeImg {
+  @apply w-2/3 flex basis-2/3 mx-6 rounded-t-lg md:h-fit md:w-48 md:rounded-none md:rounded-l-lg;
+}
+.ABLargeImg.flipped {
+  @apply w-2/3 flex order-last mx-6 mr-20 basis-2/3 rounded-t-lg md:h-fit md:w-48 md:rounded-none md:rounded-l-lg;
+}
+.ArticleBlockHalfRow {
+  @apply grid md:grid-cols-2 ml-12 mt-32 gap-16;
+}
+.ArticleBlockRow {
+  @apply grid md:grid-cols-3 mx-5;
+}
+.ArticleBlock {
+  @apply block md:container m-3 p-4;
+}
+.ArticleBlock > h4 {
+  @apply mb-2 text-2xl font-bold tracking-tight underline-offset-8;
+  text-decoration: underline;
+  color: #000;
+}
+.ArticleBlock > h5 {
+  @apply mb-2 mt-1 text-2xl font-bold tracking-tight;
+  color: #000;
+}
+.ArticleBlock > p {
+  @apply font-normal text-base;
+  color: #595959;
+}
+.Cr {
+  @apply block font-black tracking-widest text-center font-sans md:p-20;
+  background-color: #595959;
+  color: rgb(118, 118, 118);
+  font-size: 28px;
+}
+.Cr > h1 {
+  @apply my-8;
+}
+.Crblock {
+  @apply block md:container m-3 p-4 text-left;
+}
+.Crblock > h4 {
+  @apply my-2 text-xl font-bold underline-offset-8 tracking-wide;
+  text-decoration: underline;
+  color: #fff;
+}
+.Crblock > h5 {
+  @apply mb-2 mt-1 text-lg font-bold tracking-normal;
+  color: #fff;
+}
+.Crblock > p {
+  @apply font-normal text-base;
+  color: #fff;
+}
+.smalltile {
+  @apply flex flex-row shrink-0 w-fit divide-x-2 divide-pink-600 border-2 rounded-none border-pink-600;
+}
+.smalltile > span {
+  @apply p-1 text-inherit;
+}
+.largeTile {
+  @apply flex flex-row max-w-fit mx-auto m-2 md:m-8 shrink divide-x-2 divide-black hover:divide-red-500 border-2 border-black text-white;
+}
+.largeTile > h1 {
+  @apply font-black flex md:tracking-widest text-center p-2 md:text-2xl font-sans;
+}
+.firstSection {
+  @apply flex flex-col shrink divide-y-2 divide-black hover:divide-red-500 p-2;
+}
+.firstSection > span {
+  @apply p-1 text-center;
+}
+.Ai {
+  @apply block font-black tracking-widest text-center font-sans md:p-20;
+  background-color: #595959;
+  color: rgb(118, 118, 118);
+}
+.Ai > h1 {
+  @apply my-8;
+  font-size: 28px;
+}
+.issuetileArrange {
+  @apply grid md:grid-cols-3 shrink-0 hover:border-red-500;
+}
+.footer {
+  color: #1e1e1e;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  font: 16px/1 baton-turbo, sans-serif;
+  color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

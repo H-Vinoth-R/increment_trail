@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "img": "/home/dell/projects/increment/src/assets/images/road-to-somewhere_2x.png",
+      "alt": "road-to-somewhere_2x",
+      "author": "Pete Hodgson",
+      "title": "Road to somewhere",
+      "content": "By sharing both the route and the destination to our strategic objectives, we can set ourselves up for a smooth planning journey."
+    },
+    {
+      "img": "/home/dell/projects/increment/src/assets/images/software-development-as-a-wicked-problem_2x.png",
+      "alt": "software-development-as-a-wicked-problem_2x",
+      "author": "Kailash Awati",
+      "title": "Software development as a wicked problem",
+      "content": "An exploration of the foundational complexities of building software at scale—and why they often distill into human, rather than technical, challenges."
+    }
+  ]
+}
