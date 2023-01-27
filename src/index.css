@@ -2,35 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.column {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.title {
-  font: 16px baton-turbo, sans-serif;
-}
-
 .smallcaps {
   font-variant: small-caps;
 }
+.caps {
+  @apply uppercase;
+}
 
 .previous {
-  left: 0;
-  /* transform: translate(-100%, -50%); */
+  @apply shrink-0;
+  transform: translate(-100%, -50%);
   color: #000;
   position: absolute;
   top: 50%;
+  overflow: hidden;
+  left: 37%;
 }
 .IssueTitle {
   display: inline-flex;
@@ -56,11 +42,13 @@
 }
 .IssueTitle .title {
   align-self: center;
+  white-space: nowrap;
 }
 .IssueTitle.large .meta {
   font-size: 12px;
 }
 .IssueTitle.large .title {
+  @apply font-sans;
   color: #000;
   font-size: 28px;
   padding: 0.25em 0.4em 0.27em;
@@ -69,10 +57,10 @@
   @apply flex flex-col items-center md:flex-row w-screen h-2/3 m-12 p-4;
 }
 .ABLargeImg {
-  @apply w-2/3 flex basis-2/3 mx-6 rounded-t-lg md:h-fit md:w-48 md:rounded-none md:rounded-l-lg;
+  @apply w-2/3 flex md:basis-2/3 mx-6 rounded-t-lg md:h-fit md:w-48 md:rounded-none md:rounded-l-lg;
 }
 .ABLargeImg.flipped {
-  @apply w-2/3 flex order-last mx-6 mr-20 basis-2/3 rounded-t-lg md:h-fit md:w-48 md:rounded-none md:rounded-l-lg;
+  @apply w-2/3 flex order-last mx-6 mr-20 md:basis-2/3 rounded-t-lg md:h-fit md:w-48 md:rounded-none md:rounded-l-lg;
 }
 .ArticleBlockHalfRow {
   @apply grid md:grid-cols-2 ml-12 mt-32 gap-16;
@@ -128,7 +116,7 @@
   @apply p-1 text-inherit;
 }
 .largeTile {
-  @apply flex flex-row max-w-fit mx-auto m-2 md:m-8 shrink divide-x-2 divide-black hover:divide-red-500 border-2 border-black text-white;
+  @apply flex flex-row max-w-fit mx-auto m-2 md:m-8 shrink divide-x-2 divide-black hover:divide-red-500 border-2 border-black hover:border-red-500 text-white;
 }
 .largeTile > h1 {
   @apply font-black flex md:tracking-widest text-center p-2 md:text-2xl font-sans;

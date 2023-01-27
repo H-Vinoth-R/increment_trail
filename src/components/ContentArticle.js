@@ -9,7 +9,7 @@ function ContentArticle() {
   }, []);
 
   return (
-    <>
+    <div>
       <div className="ArticleBlockRow">
         {Details.map((Detail) => (
           <a href="#" className="ArticleBlock">
@@ -20,7 +20,7 @@ function ContentArticle() {
           </a>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

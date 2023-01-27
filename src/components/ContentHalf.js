@@ -14,8 +14,8 @@ function ContentHalf() {
         <div className="md:w-1/2">
           <a href="#">
             <img
-              className="h-auto max-w-lg"
-              src={detail.img}
+              className="h-auto sm:w-fit md:max-w-lg"
+              src={require(`/home/dell/projects/increment/src/assets/images/${detail.img}`)}
               alt={detail.alt}
             />
           </a>

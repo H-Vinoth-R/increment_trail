@@ -15,8 +15,8 @@ function ContentLarge() {
       <a href="#" className="ArticleBlockLarge">
         <img
           className="ABLargeImg flipped"
-          src={require("/home/dell/projects/increment/src/assets/images/road-to-somewhere_2x.png")}
-          alt=""
+          src={require("/home/dell/projects/increment/src/assets/images/how-to-make-pathfinder-soup_2x.png")}
+          alt="how-to-make-pathfinder-soup_2x"
         />
 
         <div className="ArticleBlock ">
@@ -29,8 +29,8 @@ function ContentLarge() {
       <a href="#" className="ArticleBlockLarge">
         <img
           className="ABLargeImg"
-          src={require("/home/dell/projects/increment/src/assets/images/road-to-somewhere_2x.png")}
-          alt=""
+          src={require("/home/dell/projects/increment/src/assets/images/how-to-make-pathfinder-soup_2x.png")}
+          alt="how-to-make-pathfinder-soup_2x"
         />
 
         <div className="ArticleBlock ">

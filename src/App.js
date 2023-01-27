@@ -1,24 +1,21 @@
 import React from "react";
-import Articlestile from "./components/Articlestile";
-import ContentArticle from "./components/ContentArticle";
-import ContentHalf from "./components/ContentHalf";
-import ContentLarge from "./components/ContentLarge";
-import ContinueReading from "./components/ContinueReading";
-import Footer from "./components/Footer";
-import IssueHeader from "./components/IssueHeader";
-import Nav from "./components/Nav";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div>
-      <Nav />
-      <IssueHeader />
-      <ContentArticle />
-      <ContentHalf />
-      <ContentLarge />
-      <ContinueReading />
-      <Articlestile />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route index element={<Home />} />
+            <Route path="issues" element={<Home />} />
+            <Route path="topics" element={<Home />} />
+            <Route path="store" element={<Home />} />
+            <Route path="about-us" element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

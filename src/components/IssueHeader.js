@@ -16,16 +16,18 @@ function IssueHeader() {
     <div className="w-100% block pt-20 pb-16 relative overflow-hidden text-2xl">
       <div className="block relative align-center">
         <div className="color-inherit ">
-          <ul className="previous flex flex-row flex-shrink-0 gap-16 ml-6 invisible text-xl md:visible">
+          <ul className="previous flex flex-row shrink-0 gap-16 ml-6 invisible text-xl md:visible">
             {issueTitles.map((issueTitle) => (
               <li>
-                <a className="IssueTitle cursor-pointer  opacity-25 hover:opacity-100">
+                <a className="IssueTitle cursor-pointer opacity-25 hover:opacity-100">
                   {/* should add on-click event to change the state from previous
                   to current */}
                   <div className="meta smallcaps">
                     <span>{issueTitle.id}</span>
                   </div>
-                  <h3 className="title px-2">{issueTitle.title}</h3>
+                  <h3 className="title px-2 flex flex-nowrap w-fit">
+                    {issueTitle.title}
+                  </h3>
                 </a>
               </li>
             ))}
@@ -41,10 +43,10 @@ function IssueHeader() {
           </a>
         </div>
       </div>
-      <div className="flex font-sans w-2/3  mx-auto p-5 text-base">
+      <div className="flex font-sans md:w-2/3 text-justify mx-auto p-5 text-base">
         {issueDetails}
       </div>
-      <div className="flex font-sans w-1/3 p-2 mx-auto text-lg tracking-widest break-keep">
+      <div className="flex font-sans place-content-center md:w-1/3 p-2 sm:mx-auto text-lg tracking-widest shrink-0">
         More about this issue
       </div>
     </div>
